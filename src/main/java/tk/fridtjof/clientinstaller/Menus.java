@@ -16,8 +16,8 @@ public class Menus {
 	public static final String DEFAULT_MINECRAFT_FOLDER = APPDATA + "\\" + ".minecraft";
 
 	//Change these:
-	public static final String JAR_LINK = "https://www.fridtjof.tk/Pudding.jar";
-	public static final String JSON_LINK = "https://www.fridtjof.tk/Pudding.json";
+	public static final String JAR_LINK = "https://www.fridtjof.tk/repo/client/Pudding-1.0.0.jar";
+	public static final String JSON_LINK = "https://www.fridtjof.tk/repo/client/Pudding-1.0.0.json";
 	
 	public static String minecraftFolder = DEFAULT_MINECRAFT_FOLDER;
 	public static String versionsFolder = minecraftFolder + "\\" + "versions";	
@@ -102,8 +102,10 @@ public class Menus {
 			if(createProfile) {
 				System.out.println("Creating launcher profile...");
 				try {
-					ProfileCreator.createProfile(CLIENT_ID, CLIENT_NAME, "");
+					ProfileCreator.createProfile(CLIENT_ID, CLIENT_NAME, "End_Stone");
 				} catch (FileNotFoundException e) {
+					e.printStackTrace();
+				} catch (IOException e) {
 					e.printStackTrace();
 				}
 				profileCreated = true;
