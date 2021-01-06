@@ -23,7 +23,7 @@ public class Installer {
 		System.out.println("Installing " + url + " to " + file + "...");
 		URL urle = new URL(url);
 		
-		System.out.println("Openning Stream...");
+		System.out.println("Opening Stream...");
 	    InputStream in = urle.openStream();
 	    
 	    System.out.println("Setting Output Stream...");
